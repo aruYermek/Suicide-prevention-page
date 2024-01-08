@@ -1,3 +1,15 @@
+*::-webkit-scrollbar {
+    width: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* navbar */
 #nav {
     font-family: 'Montserrat';
     font-size: 14px;
@@ -44,14 +56,23 @@
     /* 435.714% */
 }
 
-.picture-part {
-    background-image: url('img/pic1.jpeg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 300px;
+/* part with picture */
+.header {
     position: relative;
-    top: 15px;
+    overflow: hidden;
+    top: -30px;
+}
+
+.wave {
+    transform: scaleX(-1);
+    position: absolute;
+    width: 100%;
+    color: #fff;
+}
+
+#header-img {
+    width: 100%;
+    clip-path: polygon(0 0, 100% 20, 100% 80%, 50% 100%, 0 80%);
 }
 
 #title {
@@ -72,6 +93,8 @@
     position: absolute;
     top: 80px;
     left: 120px;
+    width: 450px;
+    height: 377px;
     z-index: 2;
 }
 
@@ -80,8 +103,11 @@
     top: 90px;
     left: 190px;
     z-index: 2;
-
+    width: 612px;
+    height: 338px;
 }
+
+/* Сопутствующая Информация */
 
 .info {
     display: flex;
@@ -92,7 +118,7 @@
     background-color: white;
     padding-top: 20px;
     margin: 0 auto;
-    
+
 }
 
 #info-text {
@@ -128,7 +154,9 @@
     /* 125% */
     text-decoration: none;
 }
-.knowlage-job{
+
+/* Что мы знаем? */
+.knowlage-job {
     align-items: center;
 }
 
@@ -180,48 +208,48 @@
 .big-group-el {
     display: flex;
     justify-content: center;
-    /* Выравнивание по горизонтали */
     align-items: center;
-    /* Выравнивание по вертикали */
 }
 
-.big-group {
+.big-group15 {
     margin: 0 -30px;
     position: relative;
-}
-
-.big-group:nth-child(1),
-.big-group:nth-child(5) {
+    width: 115px;
+    height: 132px;
     z-index: 1;
-    /* Первый и последний элементы будут в заднем плане */
 }
 
-.big-group:nth-child(2),
-.big-group:nth-child(4) {
+.big-group24 {
+    margin: 0 -30px;
+    position: relative;
+    width: 135px;
+    height: 154px;
     z-index: 2;
-    /* Второй и четвертый элементы будут чуть выше */
 }
 
-.big-group:nth-child(3) {
+.big-group3 {
+    margin: 0 -30px;
+    position: relative;
+    width: 140px;
+    height: 160px;
     z-index: 3;
-    /* Третий элемент будет самым близким к переднему плану */
 }
 
 .line {
     position: relative;
-    width: 970px; /* Ширина горизонтальной линии */
-    height: 100px; /* Высота, по вашему выбору */
-    margin: 0 auto; /* Центрирование контейнера .line */
-    background: #fff; /* Цвет фона, если нужен */
+    width: 970px;
+    height: 100px;
+    margin: 0 auto;
+    background: #fff;
 }
 
 .horizontal-line {
     background: #B5B5B5;
-    width: 100%; /* Ширина горизонтальной линии */
+    width: 100%;
     height: 4px;
-    margin: 0 auto; /* Центрирование контейнера .line */
+    margin: 0 auto;
     position: absolute;
-    top: 50%; /* Размещение горизонтальной линии по центру .line */
+    top: 50%;
 }
 
 .vertical-line {
@@ -229,25 +257,30 @@
     width: 5px;
     height: 38px;
     position: absolute;
-    top: 13px; /* Расположение вертикальной линии выше горизонтальной */
-    left: 50%; /* Размещение вертикальной линии на 50% относительно .line */
+    top: 13px;
+    left: 50%;
     transform: translateX(-50%);
 }
+
 .line-arrow {
     display: flex;
-    justify-content: space-between; /* Изменение распределения элементов */
+    justify-content: space-between;
     padding-top: 50px;
-    margin-left: -13px; /* Отрицательный margin для первого элемента */
-    margin-right: -13px; /* Отрицательный margin для последнего элемента */
-   
+    margin-left: -13px;
+    margin-right: -13px;
 }
+
 .lgroup {
     text-align: center;
 }
-.little-group{
+
+.little-group {
     position: relative;
     margin: 0 -25px;
+    width: 84px;
+    height: 94px;
 }
+
 .little-group:nth-child(1),
 .little-group:nth-child(5) {
     z-index: 1;
@@ -264,7 +297,8 @@
     z-index: 3;
     transform: translateY(-5px);
 }
-.little-group-text-orange{
+
+.little-group-text-orange {
     margin: 25px;
     color: #E95925;
     text-align: center;
@@ -272,9 +306,11 @@
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
-    line-height: 23px; /* 95.833% */
+    line-height: 23px;
+    /* 95.833% */
 }
-.little-group-text-green{
+
+.little-group-text-green {
 
     margin: 25px;
     color: #0C6D3C;
@@ -283,10 +319,12 @@
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
-    line-height: 23px; /* 95.833% */
+    line-height: 23px;
+    /* 95.833% */
 }
-.little-group-text-blue{
-    
+
+.little-group-text-blue {
+
     margin: 25px;
     color: #4E8AFF;
     text-align: center;
@@ -294,9 +332,11 @@
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
-    line-height: 23px; /* 95.833% */
+    line-height: 23px;
+    /* 95.833% */
 }
-.little-group-text-yellow{
+
+.little-group-text-yellow {
     margin: 25px;
     color: #D5E093;
     text-align: center;
@@ -304,12 +344,17 @@
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
-    line-height: 23px; /* 95.833% */
+    line-height: 23px;
+    /* 95.833% */
 }
-.include-list{
+
+/* лист с инфо */
+
+.include-list {
     width: 100%;
 }
-.list-title{
+
+.list-title {
     color: #000;
     font-family: 'Montserrat';
     font-size: 24px;
@@ -317,14 +362,17 @@
     font-weight: 400;
     line-height: 32px;
 }
-.list-title-span{
+
+.list-title-span {
     color: #0C6D3C;
     font-family: 'Montserrat';
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
-    line-height: 32px; /* 133.333% */
+    line-height: 32px;
+    /* 133.333% */
 }
+
 .list {
     list-style: none;
     margin: 50px 0px;
@@ -339,7 +387,8 @@
     margin-right: 30px;
     margin-left: -25px;
 }
-.list-text{
+
+.list-text {
     color: #000;
     font-family: 'Montserrat';
     font-size: 24px;
@@ -347,14 +396,17 @@
     font-weight: 700;
     line-height: 32px;
 }
-.ellipse{
+
+.ellipse {
     width: 939px;
     height: 163px;
     border-radius: 91.5px;
-    border: 4px #15854F;
+    border: 4px solid #15854F;
     border-style: dashed;
+
 }
-.ellipse-text{
+
+.ellipse-text {
     margin: 25px 53px;
     text-align: center;
     width: 833px;
@@ -363,55 +415,69 @@
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
-    line-height: 32px; /* 133.333% */
+    line-height: 32px;
+    /* 133.333% */
 }
-.dashed-ellipse{
+
+.dashed-ellipse {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 90px;
     padding-bottom: 108px;
 }
+
+/* footer */
+
 #footer {
     background: #35483F;
 
 }
-.top{
+
+.top {
     background: #D5E093;
     width: 100%;
     height: 18px;
 
 }
-.logo-footer{
+
+.logo-footer {
     width: 285px;
     height: 53px;
 }
-.social-btns{
+
+.social-btns {
     margin: 40px 0;
     margin-left: -15px;
 }
-.footer-links h4{
+
+.footer-links h4 {
     color: #FFF;
     font-family: Montserrat;
     font-size: 23px;
     font-style: normal;
     font-weight: 700;
-    line-height: 41px; /* 178.261% */ 
+    line-height: 41px;
+    /* 178.261% */
 }
-.footer-links ul{
+
+.footer-links ul {
     list-style: none;
     margin-left: -31px;
 }
+
 .footer-list a {
     color: #FFF;
     font-family: Montserrat;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
-    line-height: 35px; /* 175% */
+    line-height: 35px;
+    /* 175% */
     text-decoration: none;
 }
-.support{
+
+.support {
     color: #FFF;
     font-family: Montserrat;
     font-size: 20px;
@@ -420,36 +486,57 @@
     line-height: 20px;
 }
 
-.contact h4{
+.contact h4 {
     color: #FFF;
     font-family: Montserrat;
     font-size: 23px;
     font-style: normal;
     font-weight: 700;
-    line-height: 41px; /* 178.261% */
-}
-.contact p{
-    color: #B8CA48;
-    font-family: Montserrat;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 35px; /* 175% */
-}
-.address h4{
-    color: #FFF;
-    font-family: Montserrat;
-    font-size: 23px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 41px; /* 178.261% */
-}
-.address p{
-    color: #B8CA48;
-    font-family: Montserrat;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 35px; /* 175% */
+    line-height: 41px;
+    /* 178.261% */
 }
 
+.contact p {
+    color: #B8CA48;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 35px;
+    /* 175% */
+}
+
+.address h4 {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 41px;
+    /* 178.261% */
+}
+
+.address p {
+    color: #B8CA48;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 35px;
+    /* 175% */
+}
+
+.btn-youtube {
+    width: 60px;
+    height: 42px;
+}
+
+.btn-instagram {
+    width: 42px;
+    height: 42px;
+}
+
+.btn-facebook {
+    width: 43px;
+    height: 43px;
+}
